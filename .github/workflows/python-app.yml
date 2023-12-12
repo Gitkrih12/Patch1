@@ -26,7 +26,9 @@ jobs:
             python-version: '${{ matrix.python-version }}'
         - name: Install dependencies
           run: python -m pip install --upgrade pip
-        - name: Run tests
-          run: python -m pytest
+        - name: Test with pytest
+          run: pip install pytest
+               export PYTHONPATH=src
+               pytest
 
 
