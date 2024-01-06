@@ -13,9 +13,10 @@ def fetch_data_from_db(connection_string, query):
 
 import pytest
 
+
 @pytest.fixture
 def db_connection_string():
-    return "DRIVER={SQL Server};SERVER=TSaqqadlg01;DATABASE=PlanIntegration_TSA_UAT;"
+    return "DRIVER={SQL Server};SERVER=DB_SERVERNAME;DATABASE=DB_TABLE;"
 
 def test_fetch_data_from_db(db_connection_string):
     query = "SELECT * FROM process"
