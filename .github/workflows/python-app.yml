@@ -39,7 +39,7 @@ jobs:
         pip install pytest-sqlalchemy
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Execute SQL Query
-      run: python Patch1/blob/main/sampleproj/test_db_operations.py
+      run: test_db_operations.py
     - name: Test with pytest
       run: |
         pytest
