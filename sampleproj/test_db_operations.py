@@ -16,7 +16,7 @@ import pytest
 
 @pytest.fixture
 def db_connection_string():
-    return "DRIVER={SQL Server};SERVER=DB_SERVERNAME;DATABASE=DB_TABLE;"
+    return "DRIVER={SQL Server};USERNAME=DB_USERNAME;PASSWORD=DB_PASSWORD;SERVER=DB_SERVERNAME;DATABASE=DB_TABLE;"
 
 def test_fetch_data_from_db(db_connection_string):
     query = "SELECT * FROM process"
