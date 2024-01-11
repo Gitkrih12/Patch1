@@ -4,7 +4,7 @@ class test_person:
         self.age = age
 
 
-p1 = test_person("Ram",110)
+p1 = test_person("Sita",1200)
 
 print(p1.name)
 print(p1.age)
