@@ -5,4 +5,4 @@ def calculate_age(birth_year):
 def test_calculate_age():
     assert calculate_age(1990) ==34
     assert calculate_age(2000) == 24
-    assert calculate_age(1985) == 40
+    assert calculate_age(1985) == 39
