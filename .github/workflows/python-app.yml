@@ -36,6 +36,9 @@ jobs:
         pip install pyodbc
         pip install pandas
         pip install openpyxl
+        pip install playwright
+    - name: Install dependencies
+      run: playwright install
         
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
