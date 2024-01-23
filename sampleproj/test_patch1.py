@@ -5,13 +5,13 @@ from playwright.sync_api import sync_playwright
 
 def browser():
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        browser = p.chromium.launch(headless=False)
         yield browser
         browser.close()
 
 def test_open_browser(browser):
     page = browser.new_page()
-    page.goto("https://www.google.com/")
+    page.goto("http://tsmqmodqaapp10.tsm.local/QNXTALL/QNXT/Master/LaunchQnxt.aspx")
 
 
 
