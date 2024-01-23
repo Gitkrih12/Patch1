@@ -44,7 +44,7 @@ jobs:
         
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
-    - name: Test with pytest
+    - name: Run Playwright Tests
       run: |
         export DISPLAY=:99
         Xvfb :99 -screen 0 1024*768*24 > /dev/null 2>&1 &
