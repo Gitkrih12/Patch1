@@ -24,8 +24,7 @@ jobs:
         pip install openpyxl
         pip install playwright
         playwright install
-   
-      
+     
 
     - name: Upload Test Results
       uses: actions/upload-artifact@v2
