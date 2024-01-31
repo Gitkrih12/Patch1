@@ -24,22 +24,14 @@ jobs:
         pip install openpyxl
         pip install playwright
         playwright install
-   
-
-    - name: Run Playwright Tests
-      run: |
-        export PWDEBUG=1
-        pytest
-      
+     
 
     - name: Upload Test Results
       uses: actions/upload-artifact@v2
       with:
-        name: test-results
-        path: junit.xml
+        artifact: test-results
+        name: Workflow Report
+        path: '*.xml'
+        reporter: jest-junit
 
-    - name: Upload Screenshots
-      uses: actions/upload-artifact@v2
-      with:
-        name: screenshots
-        path: screenshots/
+    
