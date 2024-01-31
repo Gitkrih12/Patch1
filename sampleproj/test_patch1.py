@@ -23,7 +23,7 @@ def test_capture_screenshot():
         context = browser.new_context()
         page = context.new_page()
 
-        page.goto('https://www.google.com/')
+        page.goto('https://github.com/')
         page.screenshot(path='screenshot.png')
         browser.close()
 
