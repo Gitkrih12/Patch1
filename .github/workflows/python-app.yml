@@ -26,7 +26,8 @@ jobs:
 
     - name: Run Playwright Tests
       run: |
-        pytest --headful --html=report.html
+        export PWDEBUG=1
+        pytest --html=report.html
       env:
         PLAYWRIGHT_BROWSERS_PATH: $GITHUB_WORKSPACE/playwright
 
