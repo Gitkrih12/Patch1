@@ -23,15 +23,14 @@ jobs:
         pip install pandas
         pip install openpyxl
         pip install playwright
-    - name: Install dependencies
-      run: playwright install
+        playwright install
+   
 
     - name: Run Playwright Tests
       run: |
         export PWDEBUG=1
         pytest
-      env:
-        PLAYWRIGHT_BROWSERS_PATH: $GITHUB_WORKSPACE/playwright
+      
 
     - name: Upload Test Results
       uses: actions/upload-artifact@v2
