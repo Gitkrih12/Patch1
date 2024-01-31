@@ -17,12 +17,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      DB_USERNAME: ${{ secrets.DB_USERNAME}}
-      DB_PASSWORD: ${{ secrets.DB_PASSWORD}}
-      DB_SERVERNAME: ${{ secrets.DB_SERVERNAME}}
-      DB_TABLE: ${{ secrets.DB_TABLE}}
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
