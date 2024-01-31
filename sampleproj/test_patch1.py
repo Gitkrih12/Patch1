@@ -13,6 +13,7 @@ def browser():
 def test_open_browser(browser):
     page = browser.new_page()
     page.goto("https://www.google.com/")
+    page---
     """
 from playwright.sync_api import sync_playwright
 
