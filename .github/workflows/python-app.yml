@@ -23,6 +23,8 @@ jobs:
         pip install pandas
         pip install openpyxl
         pip install playwright
+    - name: Install dependencies
+      run: playwright install
 
     - name: Run Playwright Tests
       run: |
