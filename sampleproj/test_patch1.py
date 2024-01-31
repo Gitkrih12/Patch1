@@ -19,7 +19,7 @@ from playwright.sync_api import sync_playwright
 
 def test_capture_screenshot():
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
 
