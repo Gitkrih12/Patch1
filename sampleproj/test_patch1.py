@@ -1,3 +1,4 @@
+"""
 import pytest
 from playwright.sync_api import sync_playwright
 
@@ -12,6 +13,26 @@ def browser():
 def test_open_browser(browser):
     page = browser.new_page()
     page.goto("https://www.google.com/")
+    """
+from playwright.sync_api import sync_playwright
+
+def test_capture_screenshot():
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        context = browser.new_context()
+        page = context.new_page()
+
+        page.goto('https://www.google.com/')
+        page.screenshot(path='screenshot.png')
+        browser.close()
+
+
+
+
+
+
+
+
 
 
 
