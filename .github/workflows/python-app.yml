@@ -27,7 +27,7 @@ jobs:
     - name: Run Playwright Tests
       run: |
         export PWDEBUG=1
-        pytest --html=report.html
+        pytest
       env:
         PLAYWRIGHT_BROWSERS_PATH: $GITHUB_WORKSPACE/playwright
 
@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: report.html
+        path: junit.xml
 
     - name: Upload Screenshots
       uses: actions/upload-artifact@v2
