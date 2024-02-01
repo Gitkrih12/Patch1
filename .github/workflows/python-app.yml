@@ -23,7 +23,7 @@ jobs:
 
     - name: Run Pytest Playwright Tests
       run: |
-        pytest --headless
+        pytest
       env:
         PLAYWRIGHT_BROWSERS_PATH: $GITHUB_WORKSPACE/playwright
 
