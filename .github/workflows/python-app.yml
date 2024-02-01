@@ -28,8 +28,7 @@ jobs:
     - name: Run Pytest Playwright Tests with HTML Report
       run: |
         pytest --html=report.html
-      env:
-        PLAYWRIGHT_BROWSERS_PATH: $GITHUB_WORKSPACE/playwright
+     
 
 
     - name: Run Pytest Playwright Tests
