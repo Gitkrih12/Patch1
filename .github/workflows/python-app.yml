@@ -29,8 +29,7 @@ jobs:
     - name: Run Pytest Playwright Tests
       run: |
         pytest 
-      env:
-        PLAYWRIGHT_BROWSERS_PATH: $GITHUB_WORKSPACE/playwright
+      
 
     - name: Upload Test Artifacts
       uses: actions/upload-artifact@v2
