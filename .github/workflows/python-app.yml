@@ -25,6 +25,12 @@ jobs:
 
     - name: Install dependencies
       run: playwright install
+    - name: Run Pytest Playwright Tests with HTML Report
+      run: |
+        pytest --headless --html=pytest_report.html
+      env:
+        PLAYWRIGHT_BROWSERS_PATH: $GITHUB_WORKSPACE/playwright
+
 
     - name: Run Pytest Playwright Tests
       run: |
