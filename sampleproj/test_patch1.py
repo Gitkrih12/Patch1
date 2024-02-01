@@ -12,7 +12,7 @@ def browser():
 
 def test_open_browser(browser):
     page = browser.new_page()
-    page.goto("https://www.google.com/")
+    page.goto("https://github.com/")
     page.screenshot(path="screenshots/example.png")
     """
 from playwright.sync_api import sync_playwright
