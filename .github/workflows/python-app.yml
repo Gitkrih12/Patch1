@@ -27,7 +27,7 @@ jobs:
       run: playwright install
     - name: Run Pytest Playwright Tests with HTML Report
       run: |
-        pytest --sparkHtml=report.html
+        pytest --html=report.html
      
 
 
