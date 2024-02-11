@@ -9,19 +9,24 @@ def browser():
         browser = p.chromium.launch(headless=True)
         yield browser
         browser.close()
-
 def test_open_browser(browser):
     page = browser.new_page()
-    page.goto("https://github.com/")
+    page.goto("https://www.google.com/")
     page.screenshot(path="screenshots/example.png")
+    page.close()
+
+
+
+
     """
 from playwright.sync_api import sync_playwright
-
+    page.wait_for_timeout(3000)
 def test_capture_screenshot():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
+        
 
         page.goto('https://github.com/')
         page.screenshot(path='screenshot.png')
