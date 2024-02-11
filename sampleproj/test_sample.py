@@ -16,5 +16,5 @@ def browser():
 def test_open_browser(browser):
     page = browser.new_page()
     page.goto("https://www.github.com/")
-    page.screenshot(path="screenshots/example.png")
+    page.screenshot(path="screenshots/example1.png")
     page.close()
